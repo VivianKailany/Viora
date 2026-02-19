@@ -1,0 +1,21 @@
+# env
+.env
+
+# node
+frontend/node_modules
+frontend/dist
+
+# java
+backend/**/target
+
+# docker
+*.log
+
+# ide
+.vscode
+.idea
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

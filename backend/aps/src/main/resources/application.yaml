@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Viora
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/viora
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  flyway:
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger
