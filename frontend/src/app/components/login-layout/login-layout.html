@@ -1,0 +1,27 @@
+<main>
+  <section class="side">
+    <h1>VIORA</h1>
+  </section>
+
+  <section class="login-box">
+    <h2>Entrar</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <input type="text" placeholder="Login" formControlName="login" />
+
+      <input type="password" placeholder="Senha" formControlName="password" />
+
+      <button class="btn btn-primary btn-fluid" type="submit" [disabled]="disablePrimaryBtn">
+        {{ primaryBtnText }}
+      </button>
+
+    </form>
+
+    <div class="divider"><span>ou</span></div>
+
+    <button class="btn btn-secondary btn-fluid" type="button" (click)="navigate()">
+      {{ secondaryBtnText }}
+    </button>
+  </section>
+</main>

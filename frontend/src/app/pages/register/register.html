@@ -1,0 +1,31 @@
+<main>
+  <section class="side">
+    <h1>VIORA</h1>
+  </section>
+
+  <section class="login-box">
+    <h2>Criar conta</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <input type="text" placeholder="Nome" formControlName="nameUser" />
+      <input type="text" placeholder="Login" formControlName="login" />
+      <input type="password" placeholder="Senha" formControlName="password" />
+      <input type="password" placeholder="Confirmar senha" formControlName="confirmPassword" />
+
+      <button class="btn btn-primary btn-fluid" type="submit" [disabled]="form.invalid || loading">
+        {{ loading ? 'Cadastrando...' : 'Cadastrar' }}
+      </button>
+
+      @if (errorMsg) {
+        <p>{{ errorMsg }}</p>
+
+    }
+    </form>
+
+    <div class="divider"><span>ou</span></div>
+
+    <button class="btn btn-secondary btn-fluid" type="button" (click)="goToLogin()">
+      Já tenho conta
+    </button>
+  </section>
+</main>

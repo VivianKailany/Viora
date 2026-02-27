@@ -1,0 +1,151 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/colors' as *;
+
+main {
+  display: flex;
+  min-height: 100vh;
+  font-family: $font-family-base;
+  background: $gray-50;
+}
+
+.side {
+  width: 60%;
+  background: linear-gradient(135deg, $purple-700, $purple-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+.login-box {
+  width: 40%;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  gap: 20px;
+  align-items: center;
+
+  h2 {
+    text-align: center;
+    color: $purple-700;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+  }
+
+  form {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid $gray-300;
+    background: $white;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  input:focus {
+    border-color: $purple-500;
+    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.2);
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .divider {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #6b7280;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid $gray-300;
+  }
+
+  .divider span {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .error {
+    color: #b91c1c;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+  .login-box {
+    padding: 40px;
+  }
+
+  .side h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .login-box,
+  .side {
+    width: 100%;
+  }
+
+  .login-box {
+    padding: 32px 24px;
+  }
+
+  .side {
+    padding: 36px 24px;
+    min-height: 220px;
+    text-align: center;
+  }
+
+  .login-box .btn,
+  .login-box form,
+  .login-box .divider {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+  }
+
+  .side h1 {
+    font-size: 26px;
+  }
+}
+

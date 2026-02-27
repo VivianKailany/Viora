@@ -1,0 +1,13 @@
+@use './colors' as *;
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: $text;
+  background: $gray-50;
+}
+
+button { font-family: inherit; }

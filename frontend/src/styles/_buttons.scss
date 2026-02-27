@@ -1,0 +1,30 @@
+@use './variables' as *;
+@use './colors' as *;
+.btn {
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: .2s ease;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+}
+
+.btn-primary {
+  background: $purple-700;
+  color: $white;
+}
+
+.btn-primary:hover {
+  filter: brightness(.95);
+}
+
+.btn-secondary {
+  background: $white;
+  color: $purple-700;
+  border-color: $gray-300;
+}
+
+.btn-secondary:hover {
+  background: $gray-100;
+}
